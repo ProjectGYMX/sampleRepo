@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTTP Request Example</title>
+</head>
+<body>
+    <button onclick="sendWhatsApp()">Send WhatsApp</button>
+    <div id="response"></div>
+
+    <script>
+        function sendWhatsApp() {
+            var apiSecret = ""; //this will basically contain the api key generated
+            var account = ""; //the account no. assigned after connecting to the application
+            var phone = ""; //recipients phone number (currently this script supports sending text to a single user), changes will be made later on for bulk messaging
+            var text = "text"; //type of media to send (for now it is text)
+            var message = 'hello'; //the specified message
+
+            var params = new URLSearchParams({
+                "secret": apiSecret,
+                "account" : account,
+                "recipient": phone,
+                "type": "text",
+                "message": message
+            });
+
+            fetch("https://www.cloud.smschef.com/api/send/whatsapp?" + params, {
+                method: 'POST',
+            })
+            .then(response => response.json())
+            .then(result => {
+                alert(document.getElementById("response").innerHTML = "Response: " + JSON.stringify(result));
+            })
+            .catch(error => {
+                alert(console.error('Error:', error));
+            });
+        }
+    </script>
+</body>
+</html>
