@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root{
-    --primary-color: #0F0F0F;
+    --primary-color: #040D12;
     --primary-color-light: #1f2125;
     --primary-color-extra-light: #35373b;
-    --secondary-color: #44a33c;
+    --secondary-color: #c04747;
     --secondary-color-dark: #3e8837;
     --text-light: #d1d5db;
     --white: #ffffff;
@@ -38,6 +38,11 @@
     color: var(--text-light);
 }
 
+#Container-Fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+
 img{
     width: 100%;
     display: flex;
@@ -45,16 +50,26 @@ img{
 
 .logo{
     width: 100px;
+    position: relative;
+    left: 20px;
 }
 
-.navbar-nav{
-    position: relative;
-    left: 33%;
+#navbarNav{
+    padding: 30px;
+} 
+
+.navbar{
+  background-color: transparent;
+
 }
 
-.btn{
-    position: relative;
-    left: 110%;
+#btn{
+    background-color: #c04747;
+    border: none;
+}
+
+#btn:hover{
+    background-color: #883434;
 }
 
 a{
@@ -69,7 +84,7 @@ a{
 
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: #0F0F0F !important;
+    background-color: #040D12 !important;
 }
 
 
