@@ -38,7 +38,7 @@
     color: var(--text-light);
 }
 
-#Container-Fluid{
+#Container{
     padding-left: 0;
     padding-right: 0;
 }
@@ -161,4 +161,17 @@ body{
 .header_content img{
     max-width: 350px;
     margin: auto;
+}
+
+.programs{
+    
+    margin: 50px;
+}
+
+.pricing{
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    padding-bottom: 22px;
+    color: white;
 }
